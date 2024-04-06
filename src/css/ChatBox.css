@@ -1,0 +1,8 @@
+.chat-box {
+    width: 70%;
+}
+
+.chat-list {
+    overflow: auto;
+    max-height: 270px;
+}

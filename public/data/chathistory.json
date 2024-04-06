@@ -1,0 +1,70 @@
+[
+    {
+        "userid": 1,
+        "chatlist": [
+            {
+                "id": 4,
+                "userid": 1,
+                "sender": "Kevin",
+                "message": "asdf!",
+                "timestamp": "2022-04-01T10:17:45Z"
+            },
+            {
+                "id": 5,
+                "userid": 1,
+                "sender": "Kevin",
+                "message": "asdfasdf!",
+                "timestamp": "2022-04-02T10:17:45Z"
+            },
+            {
+                "id": 1,
+                "userid": 0,
+                "sender": "Me",
+                "message": "Hello, how are you?",
+                "timestamp": "2022-04-01T10:15:30Z"
+            },
+            {
+                "id": 2,
+                "userid": 1,
+                "sender": "Kevin",
+                "message": "I'm doing well, thanks for asking!",
+                "timestamp": "2022-04-01T10:17:45Z"
+            },
+            {
+                "id": 3,
+                "userid": 0,
+                "sender": "Me",
+                "message": "That's great to hear!",
+                "timestamp": "2022-04-01T10:20:00Z"
+            },
+            {
+                "id": 6,
+                "userid": 0,
+                "sender": "Me",
+                "message": ":)",
+                "timestamp": "2022-04-02T10:17:45Z"
+            },
+            {
+                "id": 7,
+                "userid": 1,
+                "sender": "Kevin",
+                "message": "><",
+                "timestamp": "2022-04-03T10:17:45Z"
+            },
+            {
+                "id": 8,
+                "userid": 0,
+                "sender": "Me",
+                "message": ":)",
+                "timestamp": "2022-04-03T10:17:45Z"
+            },
+            {
+                "id": 9,
+                "userid": 1,
+                "sender": "Kevin",
+                "message": "><",
+                "timestamp": "2022-04-03T10:17:45Z"
+            }
+        ]
+    }
+]

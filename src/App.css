@@ -3,6 +3,7 @@
 .App-body {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
+  height: 100vh;
 
   .w-p100 {
     width: 100%;
@@ -19,6 +20,15 @@
   .sider {
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
+  }
+
+  .chat-ui {
+    width: calc(100% - 80px);
+  }
+
+  .overflow-auto {
+    height: 100%;
+    overflow: auto;
   }
 
   .heading {
@@ -48,7 +58,7 @@
   }
 
   .user-img {
-    height: 50px;
+    height: 40px;
     border-radius: 100%;
   }
 }

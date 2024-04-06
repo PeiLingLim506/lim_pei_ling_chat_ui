@@ -1,0 +1,18 @@
+.text-btn {
+    font-weight: 500;
+    height: 50px;
+    width: 140px;
+    font-size: 14px;
+}
+
+.icon-btn {
+    background: none;
+    border-radius: 0;
+    border: none;
+    margin-top: 0.7rem !important;
+    margin-bottom: 0.7rem !important;
+}
+
+.icon-btn:hover {
+    background: none;
+}

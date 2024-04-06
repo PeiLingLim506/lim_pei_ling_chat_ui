@@ -1,0 +1,17 @@
+export const colors = {
+    white: '#fff',
+    black: '#000',
+    primary: '#612eff',
+    secondary: '#EAEAEA',
+    input: '#9b9797',
+    lightPurple: '#eaa9ea',
+    lightOrange: 'rgb(255, 229, 195)',
+    lightPink: '#ffc0e6',
+    lightGreen: '#acddac',
+    lightMetal: '#c6b975',
+    purple: 'purple',
+    orange: '#e89601',
+    pink: 'rgb(215, 82, 162)',
+    green: 'rgb(75, 125, 75)',
+    metal: 'rgb(113, 105, 65)',
+};

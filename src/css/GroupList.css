@@ -1,0 +1,15 @@
+.group-heading {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.group-list {
+    overflow: auto;
+    max-height: 210px;
+}
+
+.group-char {
+    font-weight: 500;
+    width: 35px;
+    height: 35px;
+}

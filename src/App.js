@@ -5,13 +5,15 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faBuilding, faHourglass, faEnvelope, faFileInvoice, faCalendar, faComment, faGear, faUserTie } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faBuilding, faHourglass, faEnvelope, faFileInvoice, faCalendar, faComment, faGear, faUserTie, faPhone, faVideo, faEllipsisVertical, faAt, faFont, faPaperclip, faFaceSmile, faImage, faLink, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 import { colors } from './assets/variables/colors';
 import { SearchInput, UserList, CustomButton, GroupList} from './components/';
 
 function App() {
   const iconButtons = [faHome, faBuilding, faHourglass, faEnvelope, faFileInvoice, faCalendar, faComment, faGear, faUserTie];
+  const roundButtons = [faPhone, faVideo, faEllipsisVertical];
+  const smButtons = [faAt, faFont, faPaperclip, faFaceSmile, faImage, faLink];
 
   return (
     <div className="App">
@@ -31,7 +33,7 @@ function App() {
                 <p className='heading mb-3'>Chat</p>
                 <div className='p-3 rounded-3 mb-4' style={{ backgroundColor: colors.white }}>
                   <div className='mb-3'>
-                    <SearchInput text='Search Contact' />
+                    <SearchInput text='Search Contact' bgcolor={colors.secondary} />
                   </div>
                   <UserList />
                   <div className='d-flex mt-3'>
@@ -53,7 +55,7 @@ function App() {
               </div>
               <div className='rounded-3 mt-4 flex-grow-1' style={{ backgroundColor: colors.white }}>
                 <Row className='m-0 g-0 h-p100'>
-                  <Col md={8}>
+                  <Col md={8} className='position-relative'>
                     <div className='d-flex align-items-center justify-content-between border-bottom p-3'>
                       <div className='d-flex align-items-center'>
                         <div className='pe-2'>
@@ -64,8 +66,32 @@ function App() {
                             <p className='user-msg' style={{ color: colors.input }}>UI / UX Designer</p>
                         </div>
                       </div>
-                      <div>
-                        <SearchInput text='Search Contact' />
+                      <div className='d-flex align-items-center'>
+                        <SearchInput text='Search' width='110px' />
+                        {roundButtons.map(roundButton => (
+                          <div className='ms-2'>
+                            <CustomButton icon={roundButton} color={colors.input} bordercolor={colors.input} isRoundBtn={true} w='30px' h='30px' border='1px solid' />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className='d-flex align-items-center justify-content-between border-top px-3 py-1 position-absolute bottom-0 w-p100'>
+                      <div className='d-flex align-items-center rounded-1 py-2'>
+                          <input
+                              type="text"
+                              placeholder="Type a message here.."
+                          />
+                      </div>
+                      <div className='d-flex align-items-center'>
+                        {smButtons.map(smButton => (
+                          <div className='ms-1'>
+                            <CustomButton icon={smButton} color={colors.black} bordercolor={colors.input} w='10px'/>
+                          </div>
+                        ))}
+                        <div className='ms-4'>
+                          <CustomButton icon={faPaperPlane} bgcolor={colors.info} color={colors.white} border='none' isRoundBtn={true} w='40px' h='40px' />
+                        </div>
                       </div>
                     </div>
                   </Col>

@@ -4,6 +4,10 @@
   font-family: "Poppins", sans-serif;
   font-size: 14px;
 
+  .w-p100 {
+    width: 100%;
+  }
+
   .h-p100 {
     height: 100%;
   }

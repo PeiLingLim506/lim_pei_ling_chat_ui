@@ -3,6 +3,7 @@ export const colors = {
     black: '#000',
     primary: '#612eff',
     secondary: '#EAEAEA',
+    info: '#FF5A6C',
     input: '#9b9797',
     lightPurple: '#eaa9ea',
     lightOrange: 'rgb(255, 229, 195)',

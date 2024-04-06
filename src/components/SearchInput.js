@@ -17,7 +17,7 @@ function SearchInput(props) {
 
   return (
     <form onSubmit={handleSubmit}>
-        <div className='d-flex align-items-center rounded-1 px-3 py-2' style={{ backgroundColor: colors.secondary, color: colors.input }}>
+        <div className='d-flex align-items-center rounded-1 px-3 py-2' style={{ backgroundColor: props.bgcolor, color: colors.input, width: props.width }}>
             <FontAwesomeIcon icon={faSearch} />
             <input
                 type="text"

@@ -40,7 +40,7 @@ const GroupList = () => {
                     while (count >= charColors.length) count -= charColors.length;
                     
                     return (
-                        <div className='d-flex align-items-center mb-2'>
+                        <div key={index} className='d-flex align-items-center mb-2'>
                             <div className='group-char rounded-2 d-flex align-items-center justify-content-center me-3' style={{ backgroundColor: charColors[count][0] }}>
                                 <p className='' style={{ color: charColors[count][1] }}>{group.company.name[0]}</p>
                             </div>

@@ -30,8 +30,8 @@ const ChatList = () => {
     <>
       {data ? (
         <>
-            {data.map(chat => (
-                <ChatBox msg={chat.message} userid={chat.userid} sender={chat.sender} datetime={chat.timestamp} />
+            {data.map((chat, index) => (
+                <div key={index}><ChatBox msg={chat.message} userid={chat.userid} sender={chat.sender} datetime={chat.timestamp} /></div>
             ))}
         </>
       ) : (

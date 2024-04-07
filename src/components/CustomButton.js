@@ -6,7 +6,7 @@ const CustomButton = (props) => {
     if (props.icon) {
         if (props.isRoundBtn) {
             return (
-                <Button className='btn round-btn btn btn-primary d-flex align-items-center justify-content-center' style={{ backgroundColor: props.bgcolor, color: props.color, borderColor: props.bordercolor, width: props.w, height: props.h, border: props.border }}>
+                <Button className='btn round-btn btn btn-primary d-flex align-items-center justify-content-center' style={{ backgroundColor: props.bgcolor, color: props.color, borderColor: props.bordercolor, width: props.w, height: props.h, border: props.border }} type={props.type ? props.type : ''}>
                     <FontAwesomeIcon icon={props.icon} size={props.size} />
                 </Button>
             );

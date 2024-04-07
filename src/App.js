@@ -4,31 +4,31 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faBuilding, faHourglass, faEnvelope, faFileInvoice, faCalendar, faComment, faGear, faUserTie, faPhone, faVideo, faEllipsisVertical, faAt, faFont, faPaperclip, faFaceSmile, faImage, faLink, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 import { colors } from './assets/variables/colors';
-import { SearchInput, UserList, CustomButton, GroupList, ChatList } from './components/';
+import { SearchInput, UserList, CustomButton, GroupList, ChatList, ChatInputBar } from './components/';
 
 function App() {
   const iconButtons = [faHome, faBuilding, faHourglass, faEnvelope, faFileInvoice, faCalendar, faComment, faGear, faUserTie];
   const roundButtons = [faPhone, faVideo, faEllipsisVertical];
-  const smButtons = [faAt, faFont, faPaperclip, faFaceSmile, faImage, faLink];
 
   return (
     <div className="App">
-      <body className='App-body pt-2 pb-4 px-1' style={{ backgroundColor: colors.secondary }}>
+      <div className='App-body pt-2 pb-4 px-1' style={{ backgroundColor: colors.secondary }}>
         <div className='d-flex overflow-auto'>
           <div style={{ width: '80px' }}>
             <div className="sider py-3 d-flex flex-column" style={{ backgroundColor: colors.primary }}>
-              {iconButtons.map(iconButton => (
-                <CustomButton icon={iconButton} size='lg' />
+              {iconButtons.map((iconButton, index) => (
+                <div key={index} className='p-0'>
+                  <CustomButton icon={iconButton} size='lg' w='100%' />
+                </div>
               ))}
             </div>
           </div>
 
           <div className='chat-ui px-3 overflow-auto'>
-            <div className='d-flex justify-content-between mb-3'>
+            <div className='d-flex justify-content-between mb-3 align-items-center'>
               <div className=''>
                 <p className='heading'>Chat</p>
               </div>
@@ -56,11 +56,11 @@ function App() {
                 </div>
               </Col>
 
-              <Col md={9} className='ps-3' style={{ height: '95vh' }}>
+              <Col md={9} className='ps-3' style={{ height: '100vh' }}>
                 <div className='rounded-3 h-p100' style={{ backgroundColor: colors.white }}>
                   <Row className='m-0 g-0 h-p100'>
                     <Col md={8} className='h-p100'>
-                      <div className='h-p100'>
+                      <div className='h-p100 position-relative'>
                         <div className='d-flex align-items-center justify-content-between border-bottom p-3'>
                           <div className='d-flex align-items-center'>
                             <div className='pe-2'>
@@ -73,36 +73,19 @@ function App() {
                           </div>
                           <div className='d-flex align-items-center'>
                             <SearchInput text='Search' width='110px' />
-                            {roundButtons.map(roundButton => (
-                              <div className='ms-2'>
+                            {roundButtons.map((roundButton, index) => (
+                              <div key={index} className='ms-2'>
                                 <CustomButton icon={roundButton} color={colors.input} bordercolor={colors.input} isRoundBtn={true} w='30px' h='30px' border='1px solid' />
                               </div>
                             ))}
                           </div>
                         </div>
 
-                        <div className='p-3' style={{ maxHeight: '82%', overflow: 'auto' }}>
+                        <div className='p-3' style={{ height: '84%', overflow: 'auto' }}>
                           <ChatList />
                         </div>
 
-                        <div className='d-flex align-items-center justify-content-between border-top px-3 py-1 w-p100'>
-                          <div className='d-flex align-items-center rounded-1 py-2'>
-                              <input
-                                  type="text"
-                                  placeholder="Type a message here.."
-                              />
-                          </div>
-                          <div className='d-flex align-items-center'>
-                            {smButtons.map(smButton => (
-                              <div className='ms-1'>
-                                <CustomButton icon={smButton} color={colors.black} bordercolor={colors.input} w='10px'/>
-                              </div>
-                            ))}
-                            <div className='ms-4'>
-                              <CustomButton icon={faPaperPlane} bgcolor={colors.info} color={colors.white} border='none' isRoundBtn={true} w='40px' h='40px' />
-                            </div>
-                          </div>
-                        </div>
+                        <ChatInputBar />
                       </div>
                     </Col>
                     <Col md={4}>
@@ -133,7 +116,7 @@ function App() {
             </Row>
           </div>
         </div>
-      </body>
+      </div>
     </div>
   );
 }
